@@ -7,8 +7,8 @@ import multiprocessing
 file_dir = '.\\source'
 segment_out_dir = '.\\segment'
 
-#files_list = files_processing.get_files_list(file_dir,postfix='*.txt')
-#segment.batch_processing_files(files_list, segment_out_dir, batchSize=1000, stopwords=['\n','',' ','\n\n'])
+files_list = files_processing.get_files_list(file_dir,postfix='*.txt')
+segment.batch_processing_files(files_list, segment_out_dir, batchSize=1000, stopwords=['\n','',' ','\n\n'])
 
 # 如果目录中有多个文件，可以使用PathLineSentences
 sentences = word2vec.PathLineSentences(segment_out_dir)
